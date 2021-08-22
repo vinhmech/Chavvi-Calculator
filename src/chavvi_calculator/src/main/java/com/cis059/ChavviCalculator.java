@@ -102,7 +102,21 @@ public class ChavviCalculator
 			a = a - b;
 		}
         
-        
+        // * option
+        else if (choice == '*') {
+			a = a * b;
+		}
+
+        // / option
+        else if (choice == '/') {
+			if (b == 0) {
+                System.out.println("ERROR: Unable to divide by 0");
+			}
+			else {
+				a = a / b;
+			}
+		}
+
         // quit option
         else if (choice == 'q') {
             System.out.println("Thank you for using Chavvi Calculator");
