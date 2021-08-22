@@ -106,7 +106,7 @@ public class ChavviCalculator
         else if (choice == '*') {
 			a = a * b;
 		}
-
+        
         // / option
         else if (choice == '/') {
 			if (b == 0) {
@@ -115,6 +115,12 @@ public class ChavviCalculator
 			else {
 				a = a / b;
 			}
+		}
+
+        // clear option 
+        else if (choice == 'c') {
+			a = 0;
+			b = 0;
 		}
 
         // quit option
