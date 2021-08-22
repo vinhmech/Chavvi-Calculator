@@ -92,6 +92,17 @@ public class ChavviCalculator
 			}
 		}
 
+        // + option
+		else if (choice == '+') {
+			a = a + b;
+		}
+
+        // - option
+		else if (choice == '-') {
+			a = a - b;
+		}
+        
+        
         // quit option
         else if (choice == 'q') {
             System.out.println("Thank you for using Chavvi Calculator");
