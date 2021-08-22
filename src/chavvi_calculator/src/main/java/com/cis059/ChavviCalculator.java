@@ -12,9 +12,6 @@ import java.util.Scanner;  // Import the Scanner class
  */
 
 
-
-
-
 public class ChavviCalculator 
 {
     // function to check if input is float 
@@ -57,8 +54,7 @@ public class ChavviCalculator
         System.out.print("\nq      Quit");
         System.out.print("\n--------------------------------------------");
         System.out.print("\nEnter a command: ");
-        choice = sc.next().charAt(0);
-            
+        choice = sc.next().charAt(0);  
         // check if user input is valid
         if (choice != 'a' && choice != 'b' && choice != '+' && choice != '-' && choice != '*' && choice != '/' && choice != 'c' && choice != 'q') {
             System.out.println("ERROR: Unknown command");
@@ -106,7 +102,7 @@ public class ChavviCalculator
         else if (choice == '*') {
 			a = a * b;
 		}
-        
+
         // / option
         else if (choice == '/') {
 			if (b == 0) {
@@ -125,6 +121,7 @@ public class ChavviCalculator
 
         // quit option
         else if (choice == 'q') {
+            sc.close();
             System.out.println("Thank you for using Chavvi Calculator");
 		}
     } while (choice != 'q');
