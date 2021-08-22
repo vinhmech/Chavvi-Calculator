@@ -39,9 +39,9 @@ public class ChavviCalculator
     // create scanner object to take input
     Scanner sc = new Scanner(System.in);
     char choice;
+    float a = 0;
+    float b = 0;
     do{
-        float a = 0;
-        float b = 0;
         System.out.print("--------------------------------------------");
         System.out.print("\nChavvi Calc");
         System.out.print("\n--------------------------------------------");
@@ -64,6 +64,35 @@ public class ChavviCalculator
             System.out.println("ERROR: Unknown command");
         }
 
+        // input a option
+        else if (choice == 'a') {
+            sc.nextLine();
+            System.out.print("Enter a number: ");
+			String a_string;
+            a_string = sc.nextLine();
+			if (isFloat(a_string) == true) {
+                a = Float.parseFloat(a_string);
+			}
+			else {
+                System.out.println("ERROR: The value entered is not a floating point number");
+			}
+		}
+
+        // input b option
+        else if (choice == 'b') {
+            sc.nextLine();
+            System.out.print("Enter a number: ");
+			String b_string;
+            b_string = sc.nextLine();
+			if (isFloat(b_string) == true) {
+                b = Float.parseFloat(b_string);
+			}
+			else {
+                System.out.println("ERROR: The value entered is not a floating point number");
+			}
+		}
+
+        // quit option
         else if (choice == 'q') {
             System.out.println("Thank you for using Chavvi Calculator");
 		}
